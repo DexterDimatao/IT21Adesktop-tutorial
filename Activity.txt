@@ -1,0 +1,3 @@
+Name:Dexter Dimatao
+Course:IT20A
+Activity:Basic of Git and GitHub

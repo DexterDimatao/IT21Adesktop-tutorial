@@ -18,3 +18,34 @@ class ChartCreator {
           );
         }
       }
+      createBarChart(data) {
+        new Chart(this.barCtx, {
+          type: "bar",
+          data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [
+              {
+                label: "# of Votes",
+                data: data.values,
+                borderWidth: 1,
+                backgroundColor: [
+                  "red",
+                  "blue",
+                  "yellow",
+                  "green",
+                  "purple",
+                  "orange",
+                ],
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+    

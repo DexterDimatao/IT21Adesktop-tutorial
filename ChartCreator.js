@@ -48,4 +48,32 @@ class ChartCreator {
           },
         });
       }
-    
+      createPieChart(data) {
+        new Chart(this.pieCtx, {
+          type: "pie",
+          data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [
+              {
+                data: data.values,
+                backgroundColor: [
+                  "red",
+                  "blue",
+                  "yellow",
+                  "green",
+                  "purple",
+                  "orange",
+                ],
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        });
+      }

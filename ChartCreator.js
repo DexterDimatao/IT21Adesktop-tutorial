@@ -77,3 +77,11 @@ class ChartCreator {
           },
         });
       }
+      async init() {
+        const data = await this.fetchData();
+        if (data) {
+          this.createBarChart(data);
+          this.createPieChart(data);
+        }
+      }
+    }
